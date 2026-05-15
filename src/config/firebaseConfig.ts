@@ -3,17 +3,18 @@ import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBJa03uXyoEmvSMDytNBZ9pOHU3Iko0rnw",
-  authDomain: "desafio3-39021.firebaseapp.com",
-  projectId: "desafio3-39021",
-  storageBucket: "desafio3-39021.firebasestorage.app",
-  messagingSenderId: "514633651519",
-  appId: "1:514633651519:web:2b767f485f75abd6666f8a"
+  apiKey: 'AIzaSyDBqCDr8wQXPhpiSRjnq-q0wk6JGyZzVl8',
+  authDomain: 'desafio3-final.firebaseapp.com',
+  projectId: 'desafio3-final',
+  storageBucket: 'desafio3-final.appspot.com',
+  messagingSenderId: '322486019499',
+  appId: '1:322486019499:web:ef93de530f8f232e1bdeee',
 };
 
 const app = initializeApp(firebaseConfig);
 
 export const auth = getAuth(app);
+
 export const db = getFirestore(app);
 
 export default app;

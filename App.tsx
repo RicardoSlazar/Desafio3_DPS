@@ -1,11 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
-import { SafeAreaView, Text } from 'react-native';
+import 'react-native-gesture-handler';
+
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+
+import { AuthProvider } from './src/context/AuthContext';
+
+import RootNavigator from './src/navigation/RootNavigator';
 
 export default function App() {
   return (
-    <SafeAreaView style={{ flex: 1 }}>
-      <Text>Desafío 3</Text>
-      <StatusBar style="auto" />
-    </SafeAreaView>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <AuthProvider>
+        <RootNavigator />
+      </AuthProvider>
+    </GestureHandlerRootView>
   );
 }
